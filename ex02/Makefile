@@ -2,7 +2,7 @@
 #                                     CONFIG                                   #
 ################################################################################
 
-NAME        := Span
+NAME        := MutantStack
 CC         := c++
 FLAGS    := -Wall -Wextra -Werror
  
@@ -10,7 +10,7 @@ FLAGS    := -Wall -Wextra -Werror
 #                                 PROGRAM'S SRCS                               #
 ################################################################################
 
-SRCS        =      main.cpp Span.cpp\
+SRCS        =      main.cpp \
 
 OBJS        := ${SRCS:.cpp=.o}
 

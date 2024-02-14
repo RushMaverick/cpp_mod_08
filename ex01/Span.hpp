@@ -4,31 +4,26 @@
 #include <iostream>
 #include <vector>
 #include <exception>
+#include <stdexcept>
+#include <cmath>
 
 class Span {
 	private:
 		unsigned int _max;
 		std::vector<int> _vec;
 	public:
-		void shortestSpan();
-		void longestSpan();
+		int shortestSpan() const;
+		int longestSpan() const;
 		void fillSpan();
-		void addNumber(unsigned int num);
+		void addNumber(int num);
 		unsigned int getSize();
 		Span();
 		Span(unsigned int num);
 		~Span();
 		Span(const Span &other);
 		Span &operator=(const Span &other);
-
-	
 };
 
-#endif
+std::ostream& operator<<(std::ostream& o, Span const & span);
 
-/*
-	To-do list:
-		Make a method that adds all given numbers to the span.
-		Finish the copy operator.
-		Finish shortestSpan() and longestSpan().
-*/
+#endif

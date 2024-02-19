@@ -15,5 +15,20 @@ int main (void){
 	catch (std::exception &e){
 		std::cout << "Not found" << std::endl;
 	}
+
+	std::list<int> l;
+	l.push_back(1);
+	l.push_back(2);
+	l.push_back(3);
+	l.push_back(4);
+	l.push_back(5);
+
+	try {
+		std::cout << easyfind(l, 3) << std::endl;
+		std::cout << easyfind(l, 45) << std::endl;
+	}
+	catch (std::exception &e){
+		std::cout << "Not found" << std::endl;
+	}
 	return 0;
 }

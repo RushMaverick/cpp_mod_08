@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <exception>
+#include <list>
 
 template <typename T>
 int easyfind(T &bucket, int n){

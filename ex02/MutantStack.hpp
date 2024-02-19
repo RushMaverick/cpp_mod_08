@@ -12,19 +12,21 @@ class MutantStack : public std::stack<T> {
 	private:
 	public:
 		MutantStack(){};
-		MutantStack(const MutantStack &other){
-			*this = other;
-		};
-		MutantStack &operator=(const MutantStack &other){
-			std::stack<T>::operator=(other);
-			return *this;
-		};
+		MutantStack(const MutantStack &other){};
+		MutantStack &operator=(const MutantStack &other) {};
 		~MutantStack(){};
 		typedef typename std::stack<T>::container_type::iterator iterator;
+		typedef typename std::stack<T>::container_type::const_iterator const_iterator;
 		iterator begin(){
 			return(std::stack<T>::c.begin());
 		}
 		iterator end(){
+			return(std::stack<T>::c.end());
+		}
+		const_iterator begin() const{
+			return(std::stack<T>::c.begin());
+		}
+		const_iterator end() const{
 			return(std::stack<T>::c.end());
 		}
 };
@@ -32,8 +34,3 @@ class MutantStack : public std::stack<T> {
 	std::ostream operator<<(std::ostream& o, MutantStack<T> const &ms){};
 
 #endif
-
-/*
-Hey there, we were wondering if we can set up a meeting next week to discuss about the log hours required for Kela.
-Would you have time to sit down with a few Hexagon members next week's Monday afternoon? 
-*/
